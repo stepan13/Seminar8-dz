@@ -1,9 +1,10 @@
 ﻿//Задача 62. Напишите программу, которая заполнит спирально массив 4 на 4.
 int rows = AskIntNumber("Рядов: ");
 int columns = AskIntNumber("Колонок: ");
-
 int[,] arr = FillSpiral(rows, columns);
 Print2dArray(arr);
+
+
 int[,] FillSpiral(int rows, int columns)
 {
     int startRow = 0;
@@ -21,6 +22,7 @@ int[,] FillSpiral(int rows, int columns)
     {
         count++;
         result[currentRow, currentCol] = count;
+        
         if (fillingRow)
         {
             currentCol += directionCol;
